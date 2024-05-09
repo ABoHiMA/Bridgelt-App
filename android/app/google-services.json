@@ -1,0 +1,29 @@
+{
+  "project_info": {
+    "project_number": "165863315426",
+    "project_id": "bridgelt",
+    "storage_bucket": "bridgelt.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:165863315426:android:a964a48b7845ad283c0bbb",
+        "android_client_info": {
+          "package_name": "com.example.bridgelt"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyAgiei0cSeRGZ7u3gjihYfKGzF7gHc_wAY"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
