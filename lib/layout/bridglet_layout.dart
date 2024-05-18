@@ -55,14 +55,7 @@ class Bridgelt extends StatelessWidget {
         return Scaffold(
           appBar: AppBar(
             centerTitle: true,
-            title: InkWell(
-              onTap: () {
-                //////////////////////AETST///////////////////////
-                print("//////////////////////AETST///////////////////////");
-                cubitApp.getUserData();
-                print(uId);
-              },
-              child: const Image(
+            title: const Image(
                 image: AssetImage("assets/imgs/logo.png"),
                 height: 49,
               ),
