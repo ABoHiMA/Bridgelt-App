@@ -1479,29 +1479,6 @@ class AppCubit extends Cubit<AppStates> {
     }
   }
 
-  void aekh() {
-    FirebaseFirestore.instance.collection('Users').doc(uId).get().then((value) {
-      bool isEmail = value.data()?['isEmail'];
-      FirebaseFirestore.instance
-          .collection('Users')
-          .doc(uId)
-          .update({'isEmail': !isEmail}).then((value) {
-        getUserData();
-        // getSpCasesUpdated();
-        // getArchivedCasesUpdated();
-        emit(AppUpdateUserDataSuccState());
-      }).catchError((error) {
-        print(" ERROR DATA ${error.toString()}");
-        emit(AppUpdateUserDataErrState(error));
-      });
-      emit(AppUpdateUserDataSuccState());
-    }).catchError((error) {
-      print(" ERROR DATA ${error.toString()}");
-      emit(AppUpdateUserDataErrState(error));
-    });
-    emit(AppUpdateUserDataSuccState());
-  }
-
   String encryptMessage(String messageToEncrypt) {
     final key = encrypt.Key.fromUtf8("a5f6b3de4g7h8ij9k2lm3nopqr0stuv1");
     final iv = encrypt.IV.fromUtf8("3xy8zw6v1n0pqrs2");
