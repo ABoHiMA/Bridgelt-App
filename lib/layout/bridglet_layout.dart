@@ -1,5 +1,3 @@
-// ignore_for_file: avoid_print, must_be_immutable
-
 import 'package:bridgelt/modules/add/cases/add_case.dart';
 import 'package:bridgelt/modules/about/about.dart';
 import 'package:bridgelt/modules/add/sessions/add_session.dart';
@@ -44,9 +42,6 @@ class Bridgelt extends StatelessWidget {
               CacheHelper.clearData(key: 'userType');
               CacheHelper.clearData(key: 'verify');
             });
-            print('ID CLEARED');
-          }).catchError((error) {
-            print("ERR CACHE${error.toString()}");
           });
         }
       },
@@ -59,8 +54,6 @@ class Bridgelt extends StatelessWidget {
                 image: AssetImage("assets/imgs/logo.png"),
                 height: 49,
               ),
-              onSecondaryTapDown: (details) => cubitApp.aekh(),
-            ),
             actions: [
               GestureDetector(
                 onTap: () {
@@ -119,15 +112,6 @@ class Bridgelt extends StatelessWidget {
                           onPressed: () {
                             pgx(context, const Bridgelt());
                             index = 0;
-                            // cubitApp.getUserData();
-                            // cubitApp.listOfVCases.clear();
-                            // cubitApp.listOfDrCases.clear();
-                            // cubitApp.listOfSpCases.clear();
-                            // userType == "SpecialNeed"
-                            //     ? cubitApp.getSpCases()
-                            //     : userType == "Doctor"
-                            //         ? cubitApp.getDrCases()
-                            //         : cubitApp.getVCases();
                           },
                           child: Row(
                             children: [
@@ -191,27 +175,6 @@ class Bridgelt extends StatelessWidget {
                                   ),
                                 )
                               : const SizedBox(),
-                      // Padding(
-                      //   padding: const EdgeInsets.all(8.0),
-                      //   child: TextButton(
-                      //     onPressed: () {
-                      //       pgn(context, const Setting());
-                      //     },
-                      //     child: Row(
-                      //       children: [
-                      //         const Icon(Icons.settings),
-                      //         const SizedBox(width: 9),
-                      //         txt(
-                      //           context: context,
-                      //           txt: "Settings",
-                      //           gy: true,
-                      //           clr: bg,
-                      //           spc: 3,
-                      //         ),
-                      //       ],
-                      //     ),
-                      //   ),
-                      // ),
                       Padding(
                         padding: const EdgeInsets.all(8.0),
                         child: TextButton(
